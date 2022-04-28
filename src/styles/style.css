@@ -303,6 +303,7 @@ body {
   font-size: 2.8rem;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
+  color: var(--title-color);
 }
 
 .nav__list {
@@ -411,8 +412,97 @@ body {
 /* --------------------------- */
 
 .app {
-  /* border: 1px solid black; */
+  border: 1px solid black;
   flex: 5;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.header__title {
+  font-size: 2.5rem;
+  letter-spacing: 0.2rem;
+  color: var(--title-color);
+}
+
+.action__box {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.search__box {
+  flex: 3;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  border-radius: 0.8rem;
+  color: var(--secondary-color);
+  position: relative;
+}
+
+.search__icon {
+  flex: 0.5;
+}
+
+.search__input {
+  flex: 8;
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  color: var(--text-color);
+}
+
+.search__box .line {
+  position: absolute;
+  bottom: 0;
+  display: inline-block;
+  height: 0.2rem;
+  width: 0;
+  background: var(--secondary-color);
+  transition: all 0.2s ease-in;
+}
+
+.search__box.searchActive .line {
+  width: 100%;
+}
+
+.filter,
+.favorites {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.8rem;
+  color: var(--secondary-color);
+}
+
+.filter {
+  flex: 1;
+  justify-content: space-evenly;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.filter:hover,
+.favorites:hover {
+  box-shadow: 0 0.1rem 0.2rem var(--secondary-color);
+  /* border-bottom: 1px solid var(--secondary-color); */
+}
+
+.favorites {
+  flex: 0.5;
+}
+
+.filter__name {
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
 }
 
 /* ?---------------------- ANIMATIONS ------------------------ */
