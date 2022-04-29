@@ -47,3 +47,12 @@ slider.addEventListener("mousemove", (e) => {
   const walk = (x - startX) * 3; // the time to move
   slider.scrollLeft = scrollLeft - walk;
 });
+
+// pagination btn effects
+const allPages = document.querySelector(".pages");
+
+allPages.addEventListener("click", (e) => {
+  const clickedPage = e.target.closest(".page");
+
+  console.log(clickedPage, clickedPage.offsetLeft, e.pageX);
+});
