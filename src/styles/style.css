@@ -412,8 +412,12 @@ body {
 /* --------------------------- */
 
 .app {
-  border: 1px solid black;
   flex: 5;
+  overflow-y: scroll;
+}
+
+.sections {
+  min-height: 95vh;
 }
 
 .header {
@@ -544,6 +548,66 @@ body {
   font-size: 1.6rem;
   color: var(--text-color);
   font-weight: var(--text-weight);
+}
+
+.recipes__wrapper {
+  padding: 1rem;
+}
+
+.recipes__title {
+  color: var(--title-color);
+  font-size: 2rem;
+}
+
+.recipes {
+  margin: 2rem 0;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.recipe {
+  width: 28rem;
+  height: 33rem;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  border-radius: 1rem;
+}
+
+.recipe:hover {
+  transform: translateY(-0.3rem);
+}
+
+.recipe__image {
+  width: 100%;
+  height: 90%;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.recipe__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.recipe__details {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(100% - 90%);
+  padding: 1rem 0;
+}
+
+.recipe__name,
+.recipe__time {
+  font-size: 1.4rem;
+  color: var(--text-color);
 }
 
 /* ?---------------------- ANIMATIONS ------------------------ */
