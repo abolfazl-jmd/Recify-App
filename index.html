@@ -86,7 +86,7 @@
           </div>
         </aside>
         <main class="app">
-          <section class="sections overview__section hidden">
+          <section class="sections overview__section">
             <header class="header">
               <div class="title__wrapper">
                 <h1 class="header__title">Looking for your favorite meal</h1>
@@ -94,21 +94,24 @@
               <div class="action__box">
                 <div class="search__box">
                   <i class="fa-solid fa-search icons search__icon"></i>
-                  <input
-                    type="text"
-                    class="search__input"
-                    placeholder="Search recipes"
-                  />
                 </div>
                 <div class="filter">
                   <i class="fa-solid fa-filter icons"></i>
-                  <span class="filter__name">Filter</span>
                 </div>
                 <div class="favorites">
                   <i class="fa-solid fa-heart icons"></i>
                 </div>
               </div>
             </header>
+            <!-- search input -->
+            <div class="search__input__wrapper">
+              <i class="fa-solid fa-times icons close__icon"></i>
+              <input
+                type="text"
+                class="search__input"
+                placeholder="Search for recipes ..."
+              />
+            </div>
 
             <!-- ------------------------------- Diets Categories ---------------------- -->
             <article class="diets__categories">
@@ -351,7 +354,7 @@
           </section>
 
           <!-- --------------------------- Favorites section --------------------- -->
-          <section class="sections favorites__section">
+          <section class="sections favorites__section hidden">
             <heder class="favorites__header">
               <h1 class="header__title">Your favorites</h1>
             </heder>

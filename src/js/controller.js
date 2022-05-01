@@ -1,14 +1,3 @@
-// search border
-const searchInput = document.querySelector(".search__input");
-
-searchInput.addEventListener("focusin", (e) => {
-  e.target.parentElement.classList.add("searchActive");
-});
-
-searchInput.addEventListener("focusout", (e) => {
-  e.target.parentElement.classList.remove("searchActive");
-});
-
 // grabbing effect
 const slider = document.querySelector(".diets__categories");
 let isDown = false;
@@ -55,4 +44,17 @@ allPages.addEventListener("click", (e) => {
   const clickedPage = e.target.closest(".page");
 
   console.log(clickedPage, clickedPage.offsetLeft, e.pageX);
+});
+
+// show search input
+const searchBtn = document.querySelector(".search__box");
+const searchInput = document.querySelector(".search__input__wrapper");
+const closeSearchBtn = document.querySelector(".close__icon");
+
+searchBtn.addEventListener("click", () => {
+  searchInput.classList.add("searchActive");
+});
+
+closeSearchBtn.addEventListener("click", () => {
+  searchInput.classList.remove("searchActive");
 });
