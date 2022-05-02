@@ -338,14 +338,14 @@ body {
   position: absolute;
   background: var(--text-color);
   font-size: 1.8rem;
-  top: -30%;
-  left: 50%;
+  top: -20%;
+  left: 100%;
   padding: 0.5rem 1.5rem;
   transform: translate(-50%, -50%);
   display: none;
 }
 
-.nav__item:hover {
+.nav__item:hover .icons {
   color: var(--text-color);
 }
 
@@ -572,7 +572,6 @@ body {
 
 .diet:hover {
   transform: translateY(-0.3rem);
-  /* box-shadow: 0 0 1rem 0.1rem rgb(185, 185, 185); */
 }
 
 .diet__img {
@@ -604,6 +603,7 @@ body {
   padding: 1rem;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
 }
 
@@ -666,12 +666,8 @@ body {
   background: #d8d9db;
   margin: 0 1rem;
   padding: 1rem;
-  cursor: pointer;
-}
-
-.previous__page,
-.next__page {
   border-radius: 100%;
+  cursor: pointer;
   padding: 1rem 1.5rem;
   transition: all 0.1s ease-out;
 }
@@ -853,3 +849,182 @@ body {
     transform: scale(0.8);
   }
 } */
+
+/* ?-------------------------- RESPONSIVE DESIGN SECTIONS -------------------------- */
+@media screen and (max-width: 1180px) {
+  .profile {
+    display: none;
+  }
+
+  .logo__wrapper {
+    flex: 1;
+  }
+
+  .nav__list {
+    flex: 2;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .sidebar {
+    flex: 0;
+    width: max-content;
+  }
+
+  .item {
+    display: none;
+  }
+
+  .item__name {
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .nav__item:hover .item__name {
+    opacity: 1;
+  }
+
+  .logo__wrapper {
+    writing-mode: vertical-lr;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo {
+    transform: rotate(-180deg);
+  }
+
+  .action__box {
+    width: 20%;
+  }
+
+  .recipe {
+    width: 20rem;
+    height: 26rem;
+  }
+
+  .recipe__name,
+  .recipe__time {
+    font-size: 1.3rem;
+  }
+
+  .overview__section .header__title {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .pagination__wrapper {
+    width: 100%;
+  }
+
+  .pagination__wrapper .icons {
+    font-size: 1.4rem;
+  }
+
+  .page {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .title__wrapper {
+    width: 60%;
+  }
+
+  .title__wrapper .header__title {
+    font-size: 1.6rem;
+  }
+
+  .action__box {
+    width: 40%;
+  }
+
+  .pages {
+    padding: 0.5rem;
+  }
+
+  .page {
+    padding: 0.5rem 1rem;
+  }
+
+  .previous__page,
+  .next__page {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+
+  .title__wrapper .header__title {
+    font-size: 1.4rem;
+    font-weight: var(--title-extra-bold);
+    line-height: 2rem;
+  }
+
+  .sidebar {
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+  }
+
+  .logo__wrapper {
+    display: none;
+  }
+
+  .nav__list {
+    flex: 0;
+  }
+
+  .nav__list {
+    padding: 0;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .nav__item {
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    color: var(--secondary-color);
+  }
+
+  .item__name {
+    display: none;
+  }
+
+  .item {
+    display: block;
+    margin-top: 0.5rem;
+    flex: 0;
+    font-size: 1.4rem;
+  }
+
+  .nav__item .icons {
+    font-size: 1.4rem;
+  }
+
+  .diet__name {
+    font-size: 1.5rem;
+  }
+
+  .page {
+    font-size: 1.2rem;
+    padding: 0.5rem 0.62rem;
+  }
+
+  .next__page,
+  .previous__page {
+    margin: 0 0.3rem;
+  }
+
+  .pagination__wrapper .icons {
+    font-size: 1.2rem;
+  }
+}
