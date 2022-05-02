@@ -715,8 +715,9 @@ body {
   margin-top: 2rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
   align-items: center;
+  justify-content: center;
+  gap: 2rem;
   padding: 1rem;
 }
 
@@ -954,6 +955,33 @@ body {
   .next__page {
     padding: 0.5rem 1rem;
   }
+
+  .favorite {
+    width: 22rem;
+    height: 27rem;
+  }
+
+  .favorite__name {
+    font-size: 1.3rem;
+  }
+
+  .favorite__time,
+  .favorite__rank {
+    font-size: 1.1rem;
+  }
+
+  .favorite__icon i {
+    font-size: 3rem;
+  }
+
+  .fav__remove {
+    font-size: 1.2rem;
+  }
+
+  .favorite__details {
+    height: 20%;
+    top: 20%;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -1026,5 +1054,18 @@ body {
 
   .pagination__wrapper .icons {
     font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 1525px) {
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    max-height: 90rem;
+    max-width: 180rem;
   }
 }
