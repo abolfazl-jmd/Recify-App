@@ -434,6 +434,7 @@ body {
   font-size: 2.5rem;
   letter-spacing: 0.2rem;
   color: var(--title-color);
+  text-transform: capitalize;
 }
 
 .action__box {
@@ -917,6 +918,30 @@ body {
 
 /* **************** END OF SHOPPING LIST SECTION ********************** */
 
+/* **************** REPORTS CHARTS SECTION ****************** */
+
+.charts {
+  padding: 1rem;
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 70%;
+  margin: 2rem auto 1rem;
+}
+
+.charts__activeHours {
+  flex: 1;
+}
+
+.charts__prices {
+  flex: 1;
+  width: 70%;
+  margin: 3rem auto 0;
+}
+
+/* **************** END OF REPORTS CHARTS SECTION ****************** */
+
 /* hidden class */
 .hidden {
   display: none;
@@ -1070,6 +1095,28 @@ body {
   .favorite__details {
     height: 20%;
     top: 20%;
+  }
+
+  .shopping__card {
+    width: 28rem;
+    height: 38rem;
+  }
+
+  .food__name,
+  .food__price {
+    font-size: 1.8rem;
+  }
+
+  .shopping__item .shop__item {
+    font-size: 1.5rem;
+  }
+
+  .charts {
+    width: 100%;
+  }
+
+  .charts__prices {
+    width: 90%;
   }
 }
 

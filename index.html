@@ -10,6 +10,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script defer type="module" src="./src/js/controller.js"></script>
   </head>
   <body>
@@ -86,7 +87,7 @@
           </div>
         </aside>
         <main class="app">
-          <section data-value="0" class="sections overview__section hidden">
+          <section data-value="0" class="sections overview__section">
             <header class="header">
               <div class="title__wrapper">
                 <h1 class="header__title">Looking for your favorite meal</h1>
@@ -685,7 +686,7 @@
           </section>
 
           <!-- ------------------ SHOPPING SECTION ------------------------ -->
-          <section data-value="2" class="sections shopping__section">
+          <section data-value="2" class="sections shopping__section hidden">
             <heder class="favorites__header">
               <h1 class="header__title">Ready to buy?</h1>
             </heder>
@@ -800,6 +801,27 @@
               </article>
             </div>
           </section>
+
+          <!-- ----------------------------- REPORTS SECTION --------------------------- -->
+          <section data-value="3" class="sections reports__section hidden">
+            <heder class="section__header">
+              <h1 class="header__title">Analytics</h1>
+            </heder>
+
+            <!-- ---------- CHARTS ------------- -->
+            <div class="charts">
+              <div class="charts__activeHours">
+                <canvas id="queriesChart">
+                  <p>Hello Fallback World</p>
+                </canvas>
+              </div>
+              <div class="charts__prices">
+                <canvas id="priceChart">
+                  <p>Hello Fallback World</p>
+                </canvas>
+              </div>
+            </div>
+          </section>
         </main>
       </div>
     </div>
@@ -809,6 +831,8 @@
 <!-- 
     
     <i class="fa-regular fa-heart"></i>
-
+              <canvas id="myChart">
+                <p>Hello Fallback World</p>
+              </canvas>
     
  -->
