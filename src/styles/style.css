@@ -909,16 +909,3 @@
     font-size: 1.2rem;
   }
 }
-/* 
-@media screen and (min-width: 1525px) {
-  .wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .container {
-    max-height: 90rem;
-    max-width: 190rem;
-  }
-} */
