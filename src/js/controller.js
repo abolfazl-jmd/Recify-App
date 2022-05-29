@@ -81,70 +81,11 @@ sideBar.addEventListener("click", (e) => {
 });
 
 // cahrts js
-// const labels = [
-//   "8 to 12",
-//   "13 to 16",
-//   "16 to 18",
-//   "18 to 20",
-//   "20 to 22",
-//   "22 to 24",
-// ];
 
-// const data = {
-//   labels: labels,
-//   datasets: [
-//     {
-//       label: "My First dataset",
-//       backgroundColor: [
-//         "rgba(54, 162, 235, 0.6)",
-//         "rgba(255, 206, 86, 0.6)",
-//         "rgba(75, 192, 192, 0.6)",
-//         "rgba(153, 102, 255, 0.6)",
-//         "rgba(255, 99, 132, 0.6)",
-//         "rgba(255, 159, 64, 0.6)",
-//       ],
-//       borderColor: "rgba(255, 255, 255, 0)",
-//       data: [12, 10, 5, 2, 20, 30],
-//     },
-//   ],
-// };
+const labels = ["Pizza", "Salad", "Pasta", "Soup", "Fish", "Hamburger"];
 
-// const config = {
-//   type: "bar",
-//   data: data,
-//   options: {
-//     title: {
-//       display: true,
-//       text: "Active Hours",
-//     },
-//     animations: {
-//       tension: {
-//         duration: 5000,
-//         easing: "linear",
-//         from: 1,
-//         to: 0,
-//         loop: true,
-//       },
-//     },
-//     responsive: true,
-//     maintainAspectRatio: true,
-//   },
-// };
-
-// const myChart = new Chart(document.getElementById("queriesChart"), config);
-
-// second one
-const priceLabels = [
-  "11 to 13",
-  "13 to 15",
-  "15 to 17",
-  "17 to 18",
-  "19 to 21",
-  "21 to 23",
-];
-
-const priceData = {
-  labels: priceLabels,
+const data = {
+  labels: labels,
   datasets: [
     {
       label: "My First dataset",
@@ -157,14 +98,14 @@ const priceData = {
         "rgba(255, 159, 64, 0.6)",
       ],
       borderColor: "rgba(255, 255, 255, 0)",
-      data: [12, 10, 5, 2, 20, 30],
+      data: [5, 7, 15, 2, 4, 17],
     },
   ],
 };
 
-const priceConfig = {
+const config = {
   type: "doughnut",
-  data: priceData,
+  data: data,
   options: {
     animations: {
       tension: {
@@ -180,10 +121,7 @@ const priceConfig = {
   },
 };
 
-const priceChart = new Chart(
-  document.getElementById("priceChart"),
-  priceConfig
-);
+const priceChart = new Chart(document.getElementById("priceChart"), config);
 
 // FIRST LOADING ANIMATION DISAPPEARING FUNC
 const mainLoader = document.querySelector(".main__loader");

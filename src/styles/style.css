@@ -700,13 +700,18 @@
   gap: 1rem;
   width: 70%;
   margin: 2rem auto 1rem;
+  align-items: center;
 }
 
-.charts__activeHours {
-  flex: 1;
+.explanation {
+  color: var(--text-color);
+  font-size: 2rem;
+  line-height: 3.5rem;
+  font-weight: var(--title-weight);
+  text-align: center;
 }
 
-.charts__prices {
+.queries__chart {
   flex: 1;
   width: 70%;
   margin: 3rem auto 0;
@@ -887,8 +892,12 @@
     width: 100%;
   }
 
-  .charts__prices {
-    width: 90%;
+  .queries__chart {
+    width: 100%;
+  }
+
+  .explanation {
+    font-size: 1.7rem;
   }
 
   .main__loader__bars {
