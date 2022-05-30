@@ -414,7 +414,9 @@
   flex-direction: column;
   cursor: pointer;
   transition: all 0.2s ease-out;
-  border-radius: 1rem;
+  border-radius: 2rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .recipe:hover {
@@ -423,9 +425,16 @@
 
 .recipe__image {
   width: 100%;
-  height: 90%;
+  height: 100%;
   border-radius: 1rem;
   overflow: hidden;
+}
+
+.recipe__image__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.178);
 }
 
 .recipe__img {
@@ -435,19 +444,36 @@
   object-position: center;
 }
 
-.recipe__details {
-  margin-top: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: calc(100% - 90%);
-  padding: 1rem 0;
+.recipe__name,
+.recipe__time,
+.recipe__rate {
+  position: absolute;
+  color: #f5f5f5;
+  margin: 1.5rem;
 }
 
-.recipe__name,
-.recipe__time {
+.recipe__name {
+  top: 0;
+  font-size: 2.4rem;
+  width: 80%;
+  line-height: 3rem;
+  font-weight: var(--title-weight);
+  letter-spacing: 0.1rem;
+}
+
+.recipe__time,
+.recipe__rate {
+  right: 0;
+  bottom: 0;
+  font-size: 1.5rem;
+}
+
+.recipe__rate {
+  left: 0;
+}
+
+.recipe__rate i {
   font-size: 1.4rem;
-  color: var(--text-color);
 }
 
 /* *************** PAGINATION STYLES ******************** */
@@ -797,9 +823,17 @@
     height: 26rem;
   }
 
-  .recipe__name,
-  .recipe__time {
+  .recipe__name {
+    font-size: 1.7rem;
+  }
+
+  .recipe__time,
+  .recipe__rate {
     font-size: 1.3rem;
+  }
+
+  .recipe__rate i {
+    font-size: 1.2rem;
   }
 
   .overview__section .header__title {

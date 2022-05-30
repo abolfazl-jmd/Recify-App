@@ -133,3 +133,9 @@ const removerLoader = () => {
 };
 
 removerLoader();
+
+const recipe = document.querySelector(".recipe");
+
+recipe.addEventListener("click", () => {
+  window.location.href = "recipe.html";
+});
