@@ -46,17 +46,23 @@ allPages.addEventListener("click", (e) => {
   console.log(clickedPage, clickedPage.offsetLeft, e.pageX);
 });
 
-// show search input
-const searchBtn = document.querySelector(".search__box");
-const searchInput = document.querySelector(".search__input__wrapper");
-const closeSearchBtn = document.querySelector(".close__icon");
+// search bar appear func
+const searchIcon = document.querySelector(".search__icon");
+const actionBox = document.querySelector(".action__box");
+const searchInput = document.querySelector(".search__input");
 
-searchBtn.addEventListener("click", () => {
-  searchInput.classList.add("searchActive");
+searchIcon.addEventListener("click", () => {
+  actionBox.classList.add("active");
+  searchInput.classList.add("active");
 });
 
-closeSearchBtn.addEventListener("click", () => {
-  searchInput.classList.remove("searchActive");
+document.addEventListener("click", (e) => {
+  const clicked = e.target;
+
+  if (clicked !== searchIcon && clicked !== searchInput) {
+    actionBox.classList.remove("active");
+    searchInput.classList.remove("active");
+  }
 });
 
 // switch sections
