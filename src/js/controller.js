@@ -1,3 +1,5 @@
+import * as model from "./model.js";
+
 // grabbing effect
 const slider = document.querySelector(".diets__categories");
 let isDown = false;
