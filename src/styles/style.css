@@ -353,21 +353,6 @@
   border-bottom: 1px solid var(--secondary-color);
 }
 
-.filter {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.2s ease-in;
-  border-radius: 0.8rem;
-  color: var(--secondary-color);
-}
-
-.filter__name {
-  font-size: 1.5rem;
-  letter-spacing: 0.1rem;
-}
-
 .diets__categories {
   width: 80vw;
   margin: 1rem auto;

@@ -3,6 +3,7 @@ import CategoriesView from "./Views/CategoriesView.js";
 import LoadingView from "./Views/LoadingView.js";
 import SiadebarTabsView from "./Views/SiadebarTabsView.js";
 import PaginationView from "./Views/PaginationView.js";
+import SearchView from "./Views/SearchView.js";
 
 const init = () => {
   LoadingView.renderMarkup();
@@ -10,25 +11,6 @@ const init = () => {
 };
 
 init();
-
-// search bar appear func
-const searchIcon = document.querySelector(".search__icon");
-const actionBox = document.querySelector(".action__box");
-const searchInput = document.querySelector(".search__input");
-
-searchIcon.addEventListener("click", () => {
-  actionBox.classList.add("active");
-  searchInput.classList.add("active");
-});
-
-document.addEventListener("click", (e) => {
-  const clicked = e.target;
-
-  if (clicked !== searchIcon && clicked !== searchInput) {
-    actionBox.classList.remove("active");
-    searchInput.classList.remove("active");
-  }
-});
 
 // cahrts js
 
