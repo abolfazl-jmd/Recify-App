@@ -1,7 +1,10 @@
 import * as model from "./model.js";
 import CategoriesView from "./Views/CategoriesView.js";
+import LoadingView from "./Views/LoadingView.js";
 
-const init = () => {};
+const init = () => {
+  LoadingView.renderMarkup();
+};
 
 init();
 
