@@ -2,21 +2,14 @@ import * as model from "./model.js";
 import CategoriesView from "./Views/CategoriesView.js";
 import LoadingView from "./Views/LoadingView.js";
 import SiadebarTabsView from "./Views/SiadebarTabsView.js";
+import PaginationView from "./Views/PaginationView.js";
 
 const init = () => {
   LoadingView.renderMarkup();
+  PaginationView.renderMarkup();
 };
 
 init();
-
-// pagination btn effects
-const allPages = document.querySelector(".pages");
-
-allPages.addEventListener("click", (e) => {
-  const clickedPage = e.target.closest(".page");
-
-  console.log(clickedPage, clickedPage.offsetLeft, e.pageX);
-});
 
 // search bar appear func
 const searchIcon = document.querySelector(".search__icon");
