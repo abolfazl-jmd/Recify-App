@@ -1,6 +1,7 @@
 import * as model from "./model.js";
 import CategoriesView from "./Views/CategoriesView.js";
 import LoadingView from "./Views/LoadingView.js";
+import SiadebarTabsView from "./Views/SiadebarTabsView.js";
 
 const init = () => {
   LoadingView.renderMarkup();
@@ -34,27 +35,6 @@ document.addEventListener("click", (e) => {
     actionBox.classList.remove("active");
     searchInput.classList.remove("active");
   }
-});
-
-// switch sections
-const allSections = document.querySelectorAll(".sections");
-const sideBar = document.querySelector(".sidebar");
-
-sideBar.addEventListener("click", (e) => {
-  const clicked = e.target.closest(".nav__item");
-
-  if (!clicked) return;
-
-  const id = clicked.dataset.value;
-  console.log(clicked, id);
-
-  allSections.forEach((section) => {
-    section.classList.add("hidden");
-
-    if (id === section.dataset.value) {
-      section.classList.remove("hidden");
-    }
-  });
 });
 
 // cahrts js
