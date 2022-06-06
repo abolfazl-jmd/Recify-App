@@ -83,14 +83,6 @@ const priceChart = new Chart(document.getElementById("priceChart"), config);
 // FIRST LOADING ANIMATION DISAPPEARING FUNC
 const mainLoader = document.querySelector(".main__loader");
 
-const removerLoader = () => {
-  setTimeout(() => {
-    mainLoader.classList.add("disappear");
-  }, 3000);
-};
-
-removerLoader();
-
 const recipe = document.querySelector(".recipe");
 
 recipe.addEventListener("click", () => {
